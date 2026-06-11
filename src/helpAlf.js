@@ -3,7 +3,9 @@ function findSpaceship(map) {
     return "Spaceship lost forever.";
   }
 
-  return [0, 0];
+  const x = map.indexOf("X");
+
+  return [x, 0];
 }
 
 module.exports = { findSpaceship };
