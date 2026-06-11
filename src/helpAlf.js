@@ -3,9 +3,12 @@ function findSpaceship(map) {
     return "Spaceship lost forever.";
   }
 
-  const x = map.indexOf("X");
+  const rows = map.split("\n");
+  const rowFromTop = rows.findIndex(row => row.includes("X"));
+  const x = rows[rowFromTop].indexOf("X");
+  const y = rows.length - 1 - rowFromTop;
 
-  return [x, 0];
+  return [x, y];
 }
 
 module.exports = { findSpaceship };
