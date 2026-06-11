@@ -32,3 +32,14 @@ test("spaceship at top left returns correct y coordinate", () => {
 
   expect(findSpaceship(map)).toEqual([0, 2]);
 });
+
+test("example map returns [7,2]", () => {
+  const map = `..........
+..........
+..........
+.......X..
+..........
+..........`;
+
+  expect(findSpaceship(map)).toEqual([7, 2]);
+});
