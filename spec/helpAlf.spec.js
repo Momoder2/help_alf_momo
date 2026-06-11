@@ -24,3 +24,11 @@ test("spaceship at bottom right returns correct x coordinate", () => {
 
   expect(findSpaceship(map)).toEqual([4, 0]);
 });
+
+test("spaceship at top left returns correct y coordinate", () => {
+  const map = `X
+.
+.`;
+
+  expect(findSpaceship(map)).toEqual([0, 2]);
+});
